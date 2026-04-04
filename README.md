@@ -1,49 +1,45 @@
 # powerup-kr
 
-Claude Code 내장 `/powerup` 튜토리얼의 한국어 번역 플러그인입니다.
+Claude Code 내장 `/powerup` 튜토리얼의 한국어 번역입니다.
 
 ## 설치 방법
 
-Claude Code 터미널에서:
-
-```
-/plugin marketplace add https://github.com/miheeya/powerup-kr.git
+```bash
+git clone https://github.com/miheeya/powerup-kr.git ~/.claude/skills/powerup-kr
 ```
 
-그다음:
-
-```
-/plugin install powerup-kr
-```
-
-또는 `/plugin`을 입력하면 열리는 플러그인 매니저에서 직접 추가할 수도 있습니다.
+설치 후 Claude Code를 재시작하거나 `/reload-plugins`를 실행하세요.
 
 ## 사용 방법
 
-> **참고**: `/powerup`은 Claude Code 내장 명령어(영어)입니다. 한국어 버전은 `/powerup-kr`을 직접 입력하세요.
-
 ```
 /powerup-kr        # 전체 레슨 목차
-/powerup-kr:01     # 개별 레슨 열기
-/powerup-kr:02
+/powerup-kr-01     # 개별 레슨 열기
+/powerup-kr-02
 ...
-/powerup-kr:10
+/powerup-kr-10
 ```
 
 ## 레슨 목록
 
-| # | 레슨 | 핵심 키워드 |
-|---|------|------------|
-| 1 | 코드베이스와 대화하기 | `@` 파일 참조, 라인 지정 |
-| 2 | 모드로 조종하기 | `Shift+Tab`, plan, auto |
-| 3 | 무엇이든 되돌리기 | `/rewind`, `Esc-Esc` |
-| 4 | 백그라운드 실행 | `&`, `/tasks` |
-| 5 | 나만의 규칙 가르치기 | `CLAUDE.md`, `/memory` |
-| 6 | 도구 확장하기 | MCP, `/mcp` |
-| 7 | 워크플로우 자동화 | skills, hooks |
-| 8 | 나를 복제하기 | subagents, `/agents` |
-| 9 | 어디서든 코딩하기 | `/remote-control`, `/teleport` |
-| 10 | 모델 조절하기 | `/model`, `/effort` |
+| # | 레슨 | 핵심 키워드 | 명령어 |
+|---|------|------------|--------|
+| 1 | 코드베이스와 대화하기 | `@` 파일 참조, 라인 지정 | `/powerup-kr-01` |
+| 2 | 모드로 조종하기 | `Shift+Tab`, plan, auto | `/powerup-kr-02` |
+| 3 | 무엇이든 되돌리기 | `/rewind`, `Esc-Esc` | `/powerup-kr-03` |
+| 4 | 백그라운드 실행 | `&`, `/tasks` | `/powerup-kr-04` |
+| 5 | 나만의 규칙 가르치기 | `CLAUDE.md`, `/memory` | `/powerup-kr-05` |
+| 6 | 도구 확장하기 | MCP, `/mcp` | `/powerup-kr-06` |
+| 7 | 워크플로우 자동화 | skills, hooks | `/powerup-kr-07` |
+| 8 | 나를 복제하기 | subagents, `/agents` | `/powerup-kr-08` |
+| 9 | 어디서든 코딩하기 | `/remote-control`, `/teleport` | `/powerup-kr-09` |
+| 10 | 모델 조절하기 | `/model`, `/effort` | `/powerup-kr-10` |
+
+## 삭제
+
+```bash
+rm -rf ~/.claude/skills/powerup-kr
+```
 
 ## 번역 원칙
 
