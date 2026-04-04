@@ -13,7 +13,7 @@ Claude Code 터미널에서:
 또는 GitHub에 올린 경우:
 
 ```
-/install-plugin github:사용자명/powerup-kr
+/install-plugin github:miheeya/powerup-kr
 ```
 
 ## 사용 방법
