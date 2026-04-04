@@ -1,5 +1,5 @@
 ---
-name: 03-무엇이든-되돌리기
+name: 03
 description: "/rewind와 Esc-Esc로 파일과 대화를 이전 상태로 되돌리는 방법을 배웁니다."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: 10-모델-조절하기
+name: 10
 description: "/model과 /effort로 상황에 맞는 모델과 사고 깊이를 선택하는 방법을 배웁니다."
 ---
 

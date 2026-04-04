@@ -1,5 +1,5 @@
 ---
-name: 07-워크플로우-자동화
+name: 07
 description: "스킬(skills)과 훅(hooks)으로 반복 작업을 자동화하는 방법을 배웁니다."
 ---
 

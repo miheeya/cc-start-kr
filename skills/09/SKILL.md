@@ -1,5 +1,5 @@
 ---
-name: 09-어디서든-코딩하기
+name: 09
 description: "/remote-control과 /teleport로 어디서든 세션에 접근하는 방법을 배웁니다."
 ---
 

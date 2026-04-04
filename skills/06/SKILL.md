@@ -1,5 +1,5 @@
 ---
-name: 06-도구-확장하기
+name: 06
 description: "MCP 서버를 연결해서 Claude에게 새로운 도구를 제공하는 방법을 배웁니다."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: 05-나만의-규칙-가르치기
+name: 05
 description: "CLAUDE.md 파일과 /memory로 Claude에게 프로젝트 규칙을 가르치는 방법을 배웁니다."
 ---
 

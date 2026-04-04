@@ -1,5 +1,5 @@
 ---
-name: 02-모드로-조종하기
+name: 02
 description: "Shift+Tab으로 권한 모드를 전환하여 Claude의 행동 방식을 제어하는 방법을 배웁니다."
 ---
 
