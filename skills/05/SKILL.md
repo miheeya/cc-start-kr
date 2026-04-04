@@ -32,4 +32,4 @@ Never edit src/legacy/
 - `/memory` — CLAUDE.md를 인라인으로 편집합니다.
 - 세 가지 레벨에서 동작합니다: **저장소**, **홈 디렉토리**(모든 프로젝트), **디렉토리별** 오버라이드.
 
-[< 목차: `/tutorial-kr`] | [이전: `/tutorial-kr:04`] | [다음: `/tutorial-kr:06`]
+[< 목차: `/powerup-kr`] | [이전: `/powerup-kr:04`] | [다음: `/powerup-kr:06`]

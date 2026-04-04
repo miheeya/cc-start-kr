@@ -33,4 +33,4 @@ Claude는 모든 편집 전에 파일을 체크포인트합니다. `Esc`를 두 
 - `/clear` — 대화를 지우되 파일은 유지합니다.
 - `/branch` — 대화를 분기해서 두 가지 접근법을 시도할 수 있습니다.
 
-[< 목차: `/tutorial-kr`] | [이전: `/tutorial-kr:02`] | [다음: `/tutorial-kr:04`]
+[< 목차: `/powerup-kr`] | [이전: `/powerup-kr:02`] | [다음: `/powerup-kr:04`]
