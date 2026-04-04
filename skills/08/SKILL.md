@@ -37,4 +37,4 @@ Claude는 자기 자신의 복제본을 생성해서 병렬로 작업할 수 있
 - 서브에이전트는 격리된 컨텍스트에서 실행됩니다.
 - 별도 브랜치에서 진정한 병렬 세션을 원하면, `claude --worktree`로 실행하세요.
 
-[< 목차: `/powerup-kr`] | [이전: `/powerup-kr:07`] | [다음: `/powerup-kr:09`]
+[< 목차: `/tutorial-kr`] | [이전: `/tutorial-kr:07`] | [다음: `/tutorial-kr:09`]

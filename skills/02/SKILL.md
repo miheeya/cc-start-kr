@@ -35,4 +35,4 @@ Shift+Tab을 누르면:
 - 장시간 무인 작업에는 **auto** 모드가 적합합니다.
 - `/permissions`를 실행해서 특정 명령어를 미리 허용하면, Claude가 매번 묻지 않습니다.
 
-[< 목차: `/powerup-kr`] | [이전: `/powerup-kr:01`] | [다음: `/powerup-kr:03`]
+[< 목차: `/tutorial-kr`] | [이전: `/tutorial-kr:01`] | [다음: `/tutorial-kr:03`]

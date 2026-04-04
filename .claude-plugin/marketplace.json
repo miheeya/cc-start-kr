@@ -1,5 +1,5 @@
 {
-  "name": "powerup-kr",
+  "name": "tutorial-kr",
   "description": "Claude Code /powerup 튜토리얼 한국어 번역 플러그인",
   "owner": {
     "name": "miheeya",
@@ -7,7 +7,7 @@
   },
   "plugins": [
     {
-      "name": "powerup-kr",
+      "name": "tutorial-kr",
       "source": "./",
       "description": "Claude Code /powerup 튜토리얼 한국어 번역",
       "author": {
