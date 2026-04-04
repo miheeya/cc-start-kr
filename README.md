@@ -5,16 +5,19 @@ Claude Code 내장 `/powerup` 튜토리얼의 한국어 번역입니다.
 ## 설치 방법
 
 ```bash
-git clone https://github.com/miheeya/powerup-kr.git ~/.claude/skills/powerup-kr
+git clone https://github.com/miheeya/powerup-kr.git /tmp/powerup-kr && \
+cp -r /tmp/powerup-kr/powerup-kr-{01,02,03,04,05,06,07,08,09,10} ~/.claude/skills/ && \
+cp -r /tmp/powerup-kr/powerup-kr ~/.claude/skills/powerup-kr-index && \
+rm -rf /tmp/powerup-kr && echo "설치 완료!"
 ```
 
-설치 후 Claude Code를 재시작하거나 `/reload-plugins`를 실행하세요.
+설치 후 Claude Code에서 `/reload-plugins`를 실행하세요.
 
 ## 사용 방법
 
 ```
-/powerup-kr        # 전체 레슨 목차
-/powerup-kr-01     # 개별 레슨 열기
+/powerup-kr-index   # 전체 레슨 목차
+/powerup-kr-01      # 개별 레슨 열기
 /powerup-kr-02
 ...
 /powerup-kr-10
@@ -38,7 +41,7 @@ git clone https://github.com/miheeya/powerup-kr.git ~/.claude/skills/powerup-kr
 ## 삭제
 
 ```bash
-rm -rf ~/.claude/skills/powerup-kr
+rm -rf ~/.claude/skills/powerup-kr-{index,01,02,03,04,05,06,07,08,09,10}
 ```
 
 ## 번역 원칙
