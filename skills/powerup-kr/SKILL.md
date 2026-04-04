@@ -1,7 +1,6 @@
 ---
 name: powerup-kr
 description: "Claude Code /powerup 튜토리얼 한국어 버전. 10가지 핵심 기능을 한국어로 학습합니다."
-argument-hint: "[레슨번호]"
 ---
 
 # Claude Code 파워업 (한국어)

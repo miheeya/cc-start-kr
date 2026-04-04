@@ -20,6 +20,8 @@ Claude Code 터미널에서:
 
 ## 사용 방법
 
+> **참고**: `/powerup`은 Claude Code 내장 명령어(영어)입니다. 한국어 버전은 `/powerup-kr`을 직접 입력하세요.
+
 ```
 /powerup-kr        # 전체 레슨 목차
 /powerup-kr:01     # 개별 레슨 열기
