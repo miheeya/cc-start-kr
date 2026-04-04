@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude plugin:*)",
+      "Bash(claude install-plugin:*)",
+      "Skill(ship)"
+    ]
+  }
+}

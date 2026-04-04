@@ -1,0 +1,9 @@
+{
+  "name": "powerup-kr",
+  "version": "1.0.0",
+  "description": "Claude Code /powerup 튜토리얼 한국어 번역",
+  "author": {
+    "name": "ax-workshop"
+  },
+  "license": "MIT"
+}
