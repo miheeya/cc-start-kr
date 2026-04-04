@@ -8,6 +8,11 @@ Claude Code 터미널에서:
 
 ```
 /plugin marketplace add https://github.com/miheeya/powerup-kr.git
+```
+
+그다음:
+
+```
 /plugin install powerup-kr
 ```
 

@@ -1,0 +1,11 @@
+{
+  "name": "powerup-kr",
+  "owner": { "name": "miheeya" },
+  "plugins": [
+    {
+      "name": "powerup-kr",
+      "source": "./",
+      "description": "Claude Code /powerup 튜토리얼 한국어 번역"
+    }
+  ]
+}
