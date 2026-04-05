@@ -17,13 +17,13 @@ description: "CLAUDE.md 파일과 /memory로 Claude에게 프로젝트 규칙을
 
 ```
 ── CLAUDE.md ──
-Run tests with: bun test
-Never edit src/legacy/
+항상 한국어로 답변해줘
+존댓말을 사용해줘
+민감한 정보(주민번호, 계좌번호)가 있으면 경고해줘
 
-> add tests for the cache
+> 이 문서 요약해줘
   ◐ reading CLAUDE.md...
-  Writing cache.test.ts,
-  running bun test to verify.        ← CLAUDE.md 규칙을 따름
+  (한국어 존댓말로 답변)       ← CLAUDE.md 규칙을 따름
 ```
 
 ## 세 가지 레벨
@@ -32,13 +32,19 @@ Never edit src/legacy/
 
 | 레벨 | 비유 | 위치 |
 |------|------|------|
-| **전체** | 회사 규칙 (모든 프로젝트 공통) | `~/.claude/CLAUDE.md` |
-| **프로젝트** | 팀 규칙 (이 프로젝트만) | 프로젝트 루트 `CLAUDE.md` |
-| **폴더** | 개인 규칙 (특정 폴더만) | 하위 폴더의 `CLAUDE.md` |
+| **전체** | 회사 규칙 (모든 작업 공통) | `~/.claude/CLAUDE.md` |
+| **프로젝트** | 팀 규칙 (이 폴더만) | 폴더 안 `CLAUDE.md` |
+| **하위 폴더** | 개인 규칙 (특정 폴더만) | 하위 폴더의 `CLAUDE.md` |
+
+## 직접 해보세요!
+
+1. `/memory`를 입력해서 규칙 편집 화면을 열어보세요
+2. "항상 한국어로 답변해줘"를 추가해 보세요
+3. 저장 후 Claude에게 질문하면 규칙이 적용됩니다
 
 ## 팁
 
-- `/init` — 현재 프로젝트를 분석해서 CLAUDE.md 초안을 자동 생성합니다.
+- `/init` — 현재 폴더를 분석해서 CLAUDE.md 초안을 자동 생성합니다.
 - `/memory` — CLAUDE.md를 바로 편집합니다.
 
 > `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동 | **"완료"** = 이 레슨 완료 표시

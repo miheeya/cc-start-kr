@@ -9,7 +9,15 @@ description: "MCP 서버를 연결해서 Claude에게 새로운 도구를 제공
 
 ## 이게 뭔가요?
 
-Claude에게 새 앱을 설치하는 것과 같습니다. MCP(Model Context Protocol) 서버를 연결하면 Slack 읽기, 데이터베이스 조회, 브라우저 제어 등 새로운 능력을 줄 수 있습니다.
+스마트폰에 앱을 설치하면 새로운 기능이 생기죠? Claude에게도 "앱"을 설치할 수 있습니다.
+이것을 MCP(Model Context Protocol)라고 부릅니다.
+
+예를 들어:
+- **Gmail 연결** → "읽지 않은 이메일 요약해줘"
+- **Google Calendar 연결** → "이번 주 일정 알려줘"
+- **Slack 연결** → "#팀채널에 급한 메시지 있어?"
+
+> 이 레슨은 **선택사항**입니다. 나중에 필요할 때 돌아와도 됩니다.
 
 ## 사용 예시
 
@@ -18,20 +26,30 @@ Claude에게 새 앱을 설치하는 것과 같습니다. MCP(Model Context Prot
   Connected servers:
     ✓ slack    ✓ github
 
-> anything urgent in #eng?
-  ◐ slack · reading channel...
+> 이번 주 슬랙에서 나를 멘션한 메시지 있어?
+  ◐ slack · reading messages...
 
-  Boris posted about the merge
-  freeze. Also 3 PRs await
-  your review on github.
+  3건의 멘션이 있습니다:
+  1. 김팀장: 보고서 검토 부탁드립니다
+  2. 이대리: 회의 시간 변경 안내
+  3. 박사원: 자료 공유드립니다
 ```
 
-연결이 완료되면 도구가 자동으로 나타납니다. "캘린더 확인해줘"나 "Notion에서 검색해줘"라고 요청하면 바로 동작합니다.
+## 어떻게 연결하나요?
+
+1. `/mcp`를 입력해서 현재 연결된 도구를 확인합니다
+2. 새 도구를 추가하려면 Claude에게 말하세요: **"Gmail MCP 연결해줘"**
+3. Claude가 설정 방법을 안내합니다
+
+## 직접 해보세요!
+
+1. `/mcp`를 입력해서 연결된 도구 목록을 확인해 보세요
+2. 아직 연결된 게 없다면 정상입니다. 필요할 때 추가하면 됩니다
 
 ## 팁
 
-- 터미널에서 바로 연결하기: `claude mcp add my-server -- npx some-mcp-pkg`
-- `/mcp`를 실행해서 연결된 서버를 확인하세요.
+- MCP는 선택사항입니다. 연결하지 않아도 Claude Code의 기본 기능은 모두 사용할 수 있습니다.
+- 연결이 완료되면 "캘린더 확인해줘"처럼 자연스럽게 요청하면 됩니다.
 
 > `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동 | **"완료"** = 이 레슨 완료 표시
 
