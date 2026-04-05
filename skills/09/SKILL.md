@@ -1,40 +1,60 @@
 ---
 name: 09
-description: "/remote-control과 /teleport로 어디서든 세션에 접근하는 방법을 배웁니다."
+description: "스킬(skills)과 훅(hooks)으로 반복 작업을 자동화하는 방법을 배웁니다."
 ---
 
-# 어디서든 코딩하기
+# 워크플로우 자동화
 
-> 원본: Code from anywhere | /remote-control, /teleport
+> 원본: Automate your workflow | skills, hooks
+
+## 이게 뭔가요?
+
+매번 같은 요리를 할 때 레시피를 외울 필요 없이 저장해두면 편하죠?
+**스킬(Skill)**은 Claude에게 저장해 놓은 레시피 같은 것입니다.
+한 번 만들어 놓으면 짧은 명령어 하나로 실행할 수 있습니다.
+
+**훅(Hook)**은 자동 알림이나 체크리스트와 비슷합니다.
+"파일을 수정할 때마다 자동으로 맞춤법 검사를 해줘" 같은 규칙을 미리 정해두는 것입니다.
 
 ## 핵심 개념
 
-`/remote-control`을 실행하면 이 터미널이 휴대폰과 claude.ai/code에서 보입니다. 출력을 보고, 프롬프트를 보내고, 도구 호출을 승인할 수 있습니다 — 다른 기기에서도 이 세션이 계속 실행됩니다.
+### 스킬 (Skills) — 저장된 레시피
+
+| 일상의 비유 | Claude에서의 의미 |
+|------------|------------------|
+| 요리 레시피를 책에 저장 | 작업 지시를 SKILL.md 파일에 저장 |
+| "김치찌개 레시피 꺼내줘" | `/deploy` 명령어로 실행 |
+| 레시피를 가족과 공유 | 팀원 모두가 같은 스킬을 사용 |
+
+기술적으로는 `.claude/skills/` 폴더에 SKILL.md 파일을 만들면 슬래시 명령어가 됩니다.
+
+### 훅 (Hooks) — 자동 체크리스트
+
+| 일상의 비유 | Claude에서의 의미 |
+|------------|------------------|
+| "집 나설 때 가스 확인" | "파일 저장할 때 코드 정리 실행" |
+| "잠자기 전 알람 설정" | "세션 시작할 때 환경 점검" |
+| "택배 오면 문자 알림" | "도구 실행 후 결과 기록" |
 
 ## 사용 예시
 
 ```
-> /remote-control
-  ◐ connecting...
+> /deploy staging
+  ◐ skill: deploy               ← 저장된 배포 레시피 실행
 
-  ✓ connected
-  see this session at
-  claude.ai/code/abc123              ← 이 URL로 접속
-
-  ── on your phone ──
-  abc123 · running tests
-  ◐ 142 of 284
-
-  ── on your phone ──
-  abc123 · ✓ all pass
-> ship it                             ← 폰에서 명령 전송
+  ✓ built
+  ✓ tests pass
+  ✓ deployed → staging.app.com
+  PostToolUse hook ran prettier  ← 훅이 자동으로 코드 정리
 ```
 
 ## 팁
 
-- 웹에서 시작한 세션을 여기로 가져오고 싶다면? `/teleport`를 실행해서 전체 히스토리와 함께 이 터미널로 당겨오세요.
-- 긴 작업을 시작하고, 노트북을 닫고, 폰에서 진행 상황을 확인하세요.
+- `/skills`를 실행하면 사용 가능한 스킬 목록을 볼 수 있습니다.
+- `/hooks`를 실행하면 어떤 훅이 언제 실행되는지 확인할 수 있습니다.
+
+**꼭 기억하세요:** 큰 작업 전에는 plan 모드로 먼저 확인!
 
 > `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동
 
-[< 목차: `/powerup-kr`] | [이전: `/powerup-kr:08`] | [다음: `/powerup-kr:10`]
+[< 목차: `/cc-start-kr-index`] | [이전: 레슨 8 `/cc-start-kr-08`] | [다음: 레슨 10 `/cc-start-kr-10`]

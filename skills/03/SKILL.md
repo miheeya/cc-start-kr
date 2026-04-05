@@ -1,38 +1,42 @@
 ---
 name: 03
-description: "/rewind와 Esc-Esc로 파일과 대화를 이전 상태로 되돌리는 방법을 배웁니다."
+description: "@ 파일 참조와 라인 지정으로 코드베이스와 대화하는 방법을 배웁니다."
 ---
 
-# 무엇이든 되돌리기
+# 코드베이스와 대화하기
 
-> 원본: Undo anything | /rewind, Esc-Esc
+> 원본: Talk to your codebase | @ files, line refs
 
-## 핵심 개념
+## 이게 뭔가요?
 
-Claude는 모든 편집 전에 파일을 체크포인트합니다. `Esc`를 두 번 빠르게 누르면(더블탭) `/rewind`가 열리고, 코드, 대화, 또는 둘 다를 이전 상태로 되돌릴 수 있습니다.
+파일 내용을 복사해서 붙여넣을 필요 없이, `@`를 입력하면 파일 이름을 검색해서 바로 첨부할 수 있습니다.
+스마트폰에서 `@친구이름`으로 태그하는 것과 비슷합니다.
 
 ## 사용 예시
 
 ```
-✓ Updated regex in parser.ts
-  8 tests failing                    ← 잘못된 방향
+> what does @              ← @ 입력하면 파일명 검색 시작
+  type a file name...
 
-  Esc Esc 누르기
-  Rewind to:
-    ❯ before parser.ts edit          ← 되돌릴 지점 선택
+> what does @src/auth.ts   ← 파일 선택
+  ❯ src/auth.ts
+    src/auth.test.ts
 
-  ✓ parser.ts restored
-> try a simpler approach             ← 다른 접근 시도
-  ◐ thinking...
+> what does @src/auth.ts do?
+  ◐ Reading src/auth.ts...
+  이 파일은 사용자 인증을 담당하며,
+  토큰 검증 기능을 제공합니다.
 ```
 
-잘못된 방향으로 갔다면, 우회하기 전 지점으로 되감고 다른 프롬프트를 시도하세요. git 히스토리는 깨끗하게 유지됩니다.
+특정 라인을 참조하려면 `src/app.ts:42` 형식으로 입력하세요. Claude가 바로 해당 위치로 이동합니다.
 
 ## 팁
 
-- `/clear` — 대화를 지우되 파일은 유지합니다.
-- `/branch` — 대화를 분기해서 두 가지 접근법을 시도할 수 있습니다.
+- `@folder/`를 입력하면 폴더 전체를 첨부할 수 있습니다.
+- 파일 이름의 일부만 입력해도 자동으로 찾아줍니다.
+
+**꼭 기억하세요:** 한국어로 자연스럽게 말하면 됩니다. "이 파일이 뭐 하는 거야?" 처럼요.
 
 > `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동
 
-[< 목차: `/powerup-kr`] | [이전: `/powerup-kr:02`] | [다음: `/powerup-kr:04`]
+[< 목차: `/cc-start-kr-index`] | [이전: 레슨 2 `/cc-start-kr-02`] | [다음: 레슨 4 `/cc-start-kr-04`]

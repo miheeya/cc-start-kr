@@ -7,9 +7,11 @@ description: "CLAUDE.md 파일과 /memory로 Claude에게 프로젝트 규칙을
 
 > 원본: Teach Claude your rules | CLAUDE.md, /memory
 
-## 핵심 개념
+## 이게 뭔가요?
 
-저장소에 `CLAUDE.md` 파일을 넣으면, Claude가 매 세션 시작 시 읽습니다. 테스트 명령어, 스타일 규칙, 건드리면 안 되는 디렉토리 등 여러분의 컨벤션을 여기에 적어두세요.
+매번 같은 말을 반복하기 싫다면, 규칙을 적어두면 됩니다.
+프로젝트 폴더에 `CLAUDE.md` 파일을 넣으면, Claude가 매번 시작할 때 자동으로 읽습니다.
+"우리 팀의 업무 매뉴얼"을 만드는 것과 같습니다.
 
 ## 사용 예시
 
@@ -20,18 +22,25 @@ Never edit src/legacy/
 
 > add tests for the cache
   ◐ reading CLAUDE.md...
-
-> add tests for the cache
   Writing cache.test.ts,
   running bun test to verify.        ← CLAUDE.md 규칙을 따름
 ```
 
+## 세 가지 레벨
+
+규칙은 범위에 따라 세 단계로 적용됩니다:
+
+| 레벨 | 비유 | 위치 |
+|------|------|------|
+| **전체** | 회사 규칙 (모든 프로젝트 공통) | `~/.claude/CLAUDE.md` |
+| **프로젝트** | 팀 규칙 (이 프로젝트만) | 프로젝트 루트 `CLAUDE.md` |
+| **폴더** | 개인 규칙 (특정 폴더만) | 하위 폴더의 `CLAUDE.md` |
+
 ## 팁
 
-- `/init` — 코드베이스를 분석해서 CLAUDE.md 초안을 자동 생성합니다.
-- `/memory` — CLAUDE.md를 인라인으로 편집합니다.
-- 세 가지 레벨에서 동작합니다: **저장소**, **홈 디렉토리**(모든 프로젝트), **디렉토리별** 오버라이드.
+- `/init` — 현재 프로젝트를 분석해서 CLAUDE.md 초안을 자동 생성합니다.
+- `/memory` — CLAUDE.md를 바로 편집합니다.
 
 > `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동
 
-[< 목차: `/powerup-kr`] | [이전: `/powerup-kr:04`] | [다음: `/powerup-kr:06`]
+[< 목차: `/cc-start-kr-index`] | [이전: 레슨 4 `/cc-start-kr-04`] | [다음: 레슨 6 `/cc-start-kr-06`]

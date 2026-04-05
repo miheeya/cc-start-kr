@@ -1,42 +1,38 @@
 ---
 name: 08
-description: "서브에이전트(subagent)를 활용해서 작업을 병렬로 처리하는 방법을 배웁니다."
+description: "MCP 서버를 연결해서 Claude에게 새로운 도구를 제공하는 방법을 배웁니다."
 ---
 
-# 나를 복제하기
+# 도구 확장하기
 
-> 원본: Multiply yourself | subagents, /agents
+> 원본: Extend with tools | MCP, /mcp
 
-## 핵심 개념
+## 이게 뭔가요?
 
-Claude는 자기 자신의 복제본을 생성해서 병렬로 작업할 수 있습니다. "서브에이전트를 사용해서 이 5개 디렉토리를 검색해줘"라고 요청하면 동시에 펼쳐지는 것을 볼 수 있습니다.
+Claude에게 새 앱을 설치하는 것과 같습니다. MCP(Model Context Protocol) 서버를 연결하면 Slack 읽기, 데이터베이스 조회, 브라우저 제어 등 새로운 능력을 줄 수 있습니다.
 
 ## 사용 예시
 
 ```
-> find any error handling bugs
-  ◐ Spawning 3 agents...
+> /mcp
+  Connected servers:
+    ✓ slack    ✓ github
 
-  ◐ agent-1 · scanning api
-  ◐ agent-2 · scanning utils
-  ◐ agent-3 · scanning cli
+> anything urgent in #eng?
+  ◐ slack · reading channel...
 
-  ✓ agent-1 · found reject
-  ◐ agent-2 · scanning utils
-  ✓ agent-3 · no issues
-
-  Found 2 issues:
-    api/fetch.ts:42 unhandled
-    utils/retry.ts:18 swallowed
+  Boris posted about the merge
+  freeze. Also 3 PRs await
+  your review on github.
 ```
+
+연결이 완료되면 도구가 자동으로 나타납니다. "캘린더 확인해줘"나 "Notion에서 검색해줘"라고 요청하면 바로 동작합니다.
 
 ## 팁
 
-- `.claude/agents/`에 전용 에이전트를 정의하세요 — 테스트 러너, 코드 리뷰어, 문서 작성자 등 각각 자체 도구와 지침을 가질 수 있습니다.
-- `/agents`를 실행해서 에이전트를 관리하세요.
-- 서브에이전트는 격리된 컨텍스트에서 실행됩니다.
-- 별도 브랜치에서 진정한 병렬 세션을 원하면, `claude --worktree`로 실행하세요.
+- 터미널에서 바로 연결하기: `claude mcp add my-server -- npx some-mcp-pkg`
+- `/mcp`를 실행해서 연결된 서버를 확인하세요.
 
 > `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동
 
-[< 목차: `/powerup-kr`] | [이전: `/powerup-kr:07`] | [다음: `/powerup-kr:09`]
+[< 목차: `/cc-start-kr-index`] | [이전: 레슨 7 `/cc-start-kr-07`] | [다음: 레슨 9 `/cc-start-kr-09`]

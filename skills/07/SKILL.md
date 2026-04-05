@@ -1,77 +1,41 @@
 ---
 name: 07
-description: "스킬(skills)과 훅(hooks)으로 반복 작업을 자동화하는 방법을 배웁니다."
+description: "& 기호로 명령어를 백그라운드에서 실행하고, /tasks로 진행 상황을 확인하는 방법을 배웁니다."
 ---
 
-# 워크플로우 자동화
+# 백그라운드 실행
 
-> 원본: Automate your workflow | skills, hooks
+> 원본: Run in the background | tasks, /tasks
 
 ## 이게 뭔가요?
 
-매번 같은 요리를 할 때 레시피를 외울 필요 없이 저장해두면 편하죠?
-**스킬(Skill)**은 Claude에게 저장해 놓은 레시피 같은 것입니다.
-"이렇게 해줘"라고 매번 설명할 필요 없이, 한 번 만들어 놓으면 짧은 명령어 하나로 실행할 수 있습니다.
-
-**훅(Hook)**은 자동 알림이나 체크리스트와 비슷합니다.
-"파일을 수정할 때마다 자동으로 맞춤법 검사를 해줘" 같은 규칙을 미리 정해두는 것입니다.
+세탁기를 돌려놓고 다른 집안일을 하는 것처럼, 오래 걸리는 작업을 뒤에서 실행하면서 다른 일을 계속할 수 있습니다.
 
 ## 핵심 개념
 
-### 스킬 (Skills) — 저장된 레시피
-
-스킬은 자주 하는 작업을 저장해 놓은 명령어입니다.
-
-| 일상의 비유 | Claude에서의 의미 |
-|------------|------------------|
-| 요리 레시피를 책에 저장 | 작업 지시를 SKILL.md 파일에 저장 |
-| "김치찌개 레시피 꺼내줘" | `/deploy` 명령어로 실행 |
-| 레시피를 가족과 공유 | 팀원 모두가 같은 스킬을 사용 |
-
-기술적으로는 `.claude/skills/` 폴더에 SKILL.md 파일을 만들면 슬래시 명령어가 됩��다.
-예: `.claude/skills/deploy/SKILL.md` → `/deploy`
-
-### 훅 (Hooks) — 자동 체크리스트
-
-훅은 특정 상황에서 자동으로 실행되는 규칙입니다.
-
-| 일상의 비유 | Claude에서의 의미 |
-|------------|------------------|
-| "집 나설 때 가스 확인" | "파일 저장할 때 코드 정리 실행" |
-| "잠자기 전 알람 설정" | "세션 시작할 때 환경 점검" |
-| "택배 오면 문자 알림" | "도구 실행 후 결과 기록" |
-
-기술적으로는 세 가지 시점에서 실행됩니다:
-- **도구 호출 전** (PreToolUse) — 실행 전에 검사
-- **도구 호출 후** (PostToolUse) — 실행 후에 정리
-- **세션 시작 시** (SessionStart) — 시작할 때 준비
+명령어 끝에 `&`를 붙이면 백그라운드에서 실행됩니다. 대화를 계속할 수 있고, 완료되면 Claude가 알려줍니다.
 
 ## 사용 예시
 
 ```
-> /deploy staging
-  ◐ skill: deploy               ← 저장된 배포 레시피 실행
+> run the test suite &
+  task started in background         ← 백그라운드로 전환
 
-  ✓ built
-  ✓ tests pass
-  ◐ pushing to staging...
+> now fix the lint in app.ts         ← 다른 작업 계속
+  ◐ Editing app.ts...
+  ◐ bun test · 12s                   ← 뒤에서 진행 중
 
-  ✓ deployed
-  staging.app.com
-  PostToolUse hook ran prettier  ← 훅이 자동으로 코드 정리
+  ✓ Removed unused import
+  ✓ bun test · 284 pass              ← 완료!
 ```
-
-**위 예시를 쉽게 읽으면:**
-1. `/deploy staging`이라고 입력했더니
-2. Claude가 저장된 레시피(스킬)대로 빌드하고, 테스트하고, 배포까지 완료
-3. 배포 후 훅이 자동으로 코드를 깔끔하게 정리
 
 ## 팁
 
-- `/skills`를 실행하면 사용 가능한 스킬 목록을 볼 수 있습니다.
-- `/hooks`를 실행하면 어떤 훅이 언제 실행되는지 확인할 수 있습니다.
-- `/install-github-app`을 실행하면 PR에 태그했을 때 Claude가 자동으로 리뷰합니다.
+- `/tasks`를 실행하면 진행 중인 모든 작업을 확인할 수 있습니다.
+- Claude는 실행 중인 작업의 결과를 읽고 실패에 자동으로 대응할 수 있습니다.
+
+**꼭 기억하세요:** 큰 작업 전에는 plan 모드로 먼저 확인!
 
 > `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동
 
-[< 목차: `/powerup-kr`] | [이전: `/powerup-kr:06`] | [다음: `/powerup-kr:08`]
+[< 목차: `/cc-start-kr-index`] | [이전: 레슨 6 `/cc-start-kr-06`] | [다음: 레슨 8 `/cc-start-kr-08`]

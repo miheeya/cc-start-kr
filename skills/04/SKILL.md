@@ -1,39 +1,47 @@
 ---
 name: 04
-description: "& 기호로 명령어를 백그라운드에서 실행하고, /tasks로 진행 상황을 확인하는 방법을 배웁니다."
+description: "Shift+Tab으로 권한 모드를 전환하여 Claude의 행동 방식을 제어하는 방법을 배웁니다."
 ---
 
-# 백그라운드 실행
+# 모드로 조종하기
 
-> 원본: Run in the background | tasks, /tasks
+> 원본: Steer with modes | shift+tab, plan, auto
+
+## 이게 뭔가요?
+
+Claude에게 얼마나 자유롭게 일하게 할지 정하는 것입니다.
+비서에게 업무를 맡길 때처럼, 매번 확인받을지 알아서 하게 할지 선택할 수 있습니다.
 
 ## 핵심 개념
 
-긴 빌드나 테스트 스위트가 작업을 막을 필요가 없습니다. bash 명령어 끝에 `&`를 붙이면 백그라운드에서 실행됩니다. 대화를 계속할 수 있고, 완료되면 Claude가 알려줍니다.
+`Shift+Tab`을 눌러 모드를 전환할 수 있습니다:
+
+| 모드 | 비유 | 설명 |
+|------|------|------|
+| **default** | 매번 확인받는 비서 | 모든 편집 전에 물어봅니다 |
+| **accept edits** | 파일은 자유, 큰 일만 보고 | 파일 편집은 자유롭게, 명령어만 확인 |
+| **plan** | 조사만 하는 컨설턴트 | 조사하고 제안만, 파일은 절대 안 건드림 |
+| **auto** | 믿고 맡기는 베테랑 | Claude가 알아서 판단 |
 
 ## 사용 예시
 
 ```
-> run the test suite &
-  task started in background         ← 백그라운드로 전환
+Shift+Tab을 누르면:
 
-> now fix the lint in app.ts         ← 다른 작업 계속
-  ◐ Editing app.ts...
-  ◐ bun test · 12s                   ← 테스트 진행 중
-
-  ✓ Removed unused import
-  ◐ bun test · 28s                   ← 아직 진행 중
-
-  ✓ Removed unused import
-  ✓ bun test · 284 pass              ← 테스트 완료!
+  default        ← 모든 편집 전에 물어봄
+  ⏵⏵ accept edits ← 편집은 자동, 명령만 확인
+  ◇ plan          ← 조사만, 파일 수정 안 함
+  ⏵⏵ auto          ← Claude가 알아서 판단
 ```
 
 ## 팁
 
-- `/tasks`를 실행하면 진행 중인 모든 작업을 확인할 수 있습니다.
-- Claude는 실행 중인 태스크의 출력을 읽고 실패에 자동으로 대응할 수 있습니다.
-- 서브에이전트(subagent)와 워크플로우도 태스크로 실행됩니다 — 모두 하나의 큐입니다.
+- 큰 작업은 **plan** 모드로 먼저 검토한 후 진행하세요.
+- 장시간 무인 작업에는 **auto** 모드가 적합합니다.
+- `/permissions`를 실행해서 특정 명령어를 미리 허용하면, Claude가 매번 묻지 않습니다.
+
+**꼭 기억하세요:** `Esc` = 중단, `Esc Esc` = 되돌리기. 모르겠으면 `n`(거부)이 안전합니다. 큰 작업 전에는 plan 모드로 먼저 확인!
 
 > `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동
 
-[< 목차: `/powerup-kr`] | [이전: `/powerup-kr:03`] | [다음: `/powerup-kr:05`]
+[< 목차: `/cc-start-kr-index`] | [이전: 레슨 3 `/cc-start-kr-03`] | [다음: 레슨 5 `/cc-start-kr-05`]
