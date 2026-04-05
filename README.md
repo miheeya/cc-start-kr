@@ -6,7 +6,7 @@ Claude Code 내장 `/powerup` 튜토리얼의 한국어 번역입니다.
 
 ```bash
 git clone https://github.com/miheeya/powerup-kr.git /tmp/powerup-kr && \
-cp -r /tmp/powerup-kr/powerup-kr-{01,02,03,04,05,06,07,08,09,10} ~/.claude/skills/ && \
+cp -r /tmp/powerup-kr/powerup-kr-{00,01,02,03,04,05,06,07,08,09,10,11} ~/.claude/skills/ && \
 cp -r /tmp/powerup-kr/powerup-kr ~/.claude/skills/powerup-kr-index && \
 rm -rf /tmp/powerup-kr && echo "설치 완료!"
 ```
@@ -17,16 +17,18 @@ rm -rf /tmp/powerup-kr && echo "설치 완료!"
 
 ```
 /powerup-kr-index   # 전체 레슨 목차
+/powerup-kr-00      # 시작하기: 첫 걸음 (초보자 가이드)
 /powerup-kr-01      # 개별 레슨 열기
-/powerup-kr-02
 ...
 /powerup-kr-10
+/powerup-kr-11      # 막혔을 때: 문제 해결 가이드
 ```
 
 ## 레슨 목록
 
 | # | 레슨 | 핵심 키워드 | 명령어 |
 |---|------|------------|--------|
+| 0 | 시작하기: 첫 걸음 | 터미널, 기호, 안전, 명령어 | `/powerup-kr-00` |
 | 1 | 코드베이스와 대화하기 | `@` 파일 참조, 라인 지정 | `/powerup-kr-01` |
 | 2 | 모드로 조종하기 | `Shift+Tab`, plan, auto | `/powerup-kr-02` |
 | 3 | 무엇이든 되돌리기 | `/rewind`, `Esc-Esc` | `/powerup-kr-03` |
@@ -37,11 +39,12 @@ rm -rf /tmp/powerup-kr && echo "설치 완료!"
 | 8 | 나를 복제하기 | subagents, `/agents` | `/powerup-kr-08` |
 | 9 | 어디서든 코딩하기 | `/remote-control`, `/teleport` | `/powerup-kr-09` |
 | 10 | 모델 조절하기 | `/model`, `/effort` | `/powerup-kr-10` |
+| 11 | 막혔을 때 | 문제 해결, 치트시트, 명령어 | `/powerup-kr-11` |
 
 ## 삭제
 
 ```bash
-rm -rf ~/.claude/skills/powerup-kr-{index,01,02,03,04,05,06,07,08,09,10}
+rm -rf ~/.claude/skills/powerup-kr-{index,00,01,02,03,04,05,06,07,08,09,10,11}
 ```
 
 ## 번역 원칙

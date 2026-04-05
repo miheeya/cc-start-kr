@@ -32,4 +32,6 @@ MCP(Model Context Protocol) 서버를 연결하면 Claude에게 새로운 도구
 
 - 터미널에서 바로 연결하기: `claude mcp add my-server -- npx some-mcp-pkg`
 
+> `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동
+
 [< 목차: `/powerup-kr`] | [이전: `/powerup-kr:05`] | [다음: `/powerup-kr:07`]
