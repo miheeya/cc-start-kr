@@ -53,6 +53,11 @@ description: "Claude Code 사용 중 막혔을 때의 문제 해결법과 기능
 - 가장 중요한 단축키 세 가지: `Esc`(중단), `Esc Esc`(되돌리기), `Shift+Tab`(모드 전환)
 - `/help`를 입력하면 언제든 전체 도움말을 볼 수 있습니다
 
-> `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동
+> `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동 | **"완료"** = 이 레슨 완료 표시
+
+사용자가 "완료"라고 입력하면 아래 명령어를 실행하고 "레슨 12 완료! 0을 입력하면 목차에서 진척률을 확인할 수 있습니다."라고 안내하세요:
+```bash
+mkdir -p ~/.cc-start-kr && echo 12 >> ~/.cc-start-kr/completed && sort -un -o ~/.cc-start-kr/completed ~/.cc-start-kr/completed
+```
 
 [< 목차: `/cc-start-kr-index`] | [이전: 레슨 11 `/cc-start-kr-11`]

@@ -36,6 +36,11 @@ description: "& 기호로 명령어를 백그라운드에서 실행하고, /task
 
 **꼭 기억하세요:** 큰 작업 전에는 plan 모드로 먼저 확인!
 
-> `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동
+> `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동 | **"완료"** = 이 레슨 완료 표시
+
+사용자가 "완료"라고 입력하면 아래 명령어를 실행하고 "레슨 7 완료! 0을 입력하면 목차에서 진척률을 확인할 수 있습니다."라고 안내하세요:
+```bash
+mkdir -p ~/.cc-start-kr && echo 7 >> ~/.cc-start-kr/completed && sort -un -o ~/.cc-start-kr/completed ~/.cc-start-kr/completed
+```
 
 [< 목차: `/cc-start-kr-index`] | [이전: 레슨 6 `/cc-start-kr-06`] | [다음: 레슨 8 `/cc-start-kr-08`]

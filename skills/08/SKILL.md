@@ -33,6 +33,11 @@ Claude에게 새 앱을 설치하는 것과 같습니다. MCP(Model Context Prot
 - 터미널에서 바로 연결하기: `claude mcp add my-server -- npx some-mcp-pkg`
 - `/mcp`를 실행해서 연결된 서버를 확인하세요.
 
-> `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동
+> `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동 | **"완료"** = 이 레슨 완료 표시
+
+사용자가 "완료"라고 입력하면 아래 명령어를 실행하고 "레슨 8 완료! 0을 입력하면 목차에서 진척률을 확인할 수 있습니다."라고 안내하세요:
+```bash
+mkdir -p ~/.cc-start-kr && echo 8 >> ~/.cc-start-kr/completed && sort -un -o ~/.cc-start-kr/completed ~/.cc-start-kr/completed
+```
 
 [< 목차: `/cc-start-kr-index`] | [이전: 레슨 7 `/cc-start-kr-07`] | [다음: 레슨 9 `/cc-start-kr-09`]
