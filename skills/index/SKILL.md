@@ -41,6 +41,7 @@ cat ~/.cc-start-kr/completed 2>/dev/null || echo "NONE"
 | 10 | | **나를 복제하기** | subagents, `/agents` | `/cc-start-kr-10` |
 | 11 | | **어디서든 코딩하기** | `/remote-control`, `/teleport` | `/cc-start-kr-11` |
 | 12 | | **막혔을 때** | 문제 해결, 치트시트 | `/cc-start-kr-12` |
+| 13 | | **보너스: 실전 따라하기** | 업무 시나리오, 조합 | `/cc-start-kr-13` |
 
 ## 사용법
 

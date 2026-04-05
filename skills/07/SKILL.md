@@ -5,7 +5,7 @@ description: "& 기호로 명령어를 백그라운드에서 실행하고, /task
 
 # 백그라운드 실행
 
-> 원본: Run in the background | tasks, /tasks
+> 모델을 고르는 법을 배웠습니다. 이제 기다리지 않고 동시에 일하는 법을 배워봅시다.
 
 ## 이게 뭔가요?
 

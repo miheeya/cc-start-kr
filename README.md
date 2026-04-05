@@ -40,6 +40,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/miheeya/cc-start-kr/mast
 | 10 | 나를 복제하기 | subagents, `/agents` |
 | 11 | 어디서든 코딩하기 | `/remote-control`, `/teleport` |
 | 12 | 막혔을 때 | 문제 해결, 치트시트 |
+| 13 | 보너스: 실전 따라하기 | 업무 시나리오, 조합 |
 
 ## 삭제
 

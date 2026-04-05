@@ -5,7 +5,7 @@ description: "MCP 서버를 연결해서 Claude에게 새로운 도구를 제공
 
 # 도구 확장하기
 
-> 원본: Extend with tools | MCP, /mcp
+> 여기서부터는 고급 기능입니다. 기본기를 익혔으니 Claude의 능력을 확장해봅시다.
 
 ## 이게 뭔가요?
 

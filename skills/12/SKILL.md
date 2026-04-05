@@ -48,10 +48,33 @@ description: "Claude Code 사용 중 막혔을 때의 문제 해결법과 기능
 | `/fast` | 빠른 모드 전환 | 속도 우선일 때 |
 | `/btw` | 사이드 질문 | 하던 작업 중 잠깐 다른 질문 |
 
+## 에러 메시지가 나왔을 때
+
+| 에러 메시지 | 의미 | 해결법 |
+|------------|------|--------|
+| Permission denied | 권한이 없음 | `y`를 눌러 허용하거나, `n`으로 건너뛰기 |
+| File not found | 파일을 못 찾음 | `@`로 정확한 파일명 확인 |
+| Context window full | 대화가 너무 길어짐 | `/compact`로 압축하거나 `/clear`로 새로 시작 |
+| Rate limited | 요청이 너무 많음 | 1~2분 기다린 후 재시도 |
+| Tool use denied | 도구 실행이 거부됨 | `Shift+Tab`으로 모드 확인 (plan 모드면 실행 안 됨) |
+
 ## 팁
 
 - 가장 중요한 단축키 세 가지: `Esc`(중단), `Esc Esc`(되돌리기), `Shift+Tab`(모드 전환)
 - `/help`를 입력하면 언제든 전체 도움말을 볼 수 있습니다
+- 해결이 안 되면 `/doctor`로 설치 상태를 점검해 보세요
+
+---
+
+## 축하합니다!
+
+12개 레슨을 모두 완료하셨다면, 이제 Claude Code의 핵심 기능을 모두 배운 것입니다!
+
+**다음 단계:**
+- **보너스 레슨 13** — 실전 업무 시나리오를 따라하며 배운 기능을 조합해 보세요
+- **`/help`** — 더 많은 명령어를 탐색해 보세요
+- **`CLAUDE.md`** — 나만의 업무 규칙을 추가하며 AI 비서를 맞춤 설정하세요
+- **빌트인 `/powerup`** — 영어 원본으로 고급 기능을 더 배워보세요
 
 > `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동 | **"완료"** = 이 레슨 완료 표시
 
@@ -60,4 +83,4 @@ description: "Claude Code 사용 중 막혔을 때의 문제 해결법과 기능
 mkdir -p ~/.cc-start-kr && echo 12 >> ~/.cc-start-kr/completed && sort -un -o ~/.cc-start-kr/completed ~/.cc-start-kr/completed
 ```
 
-[< 목차: `/cc-start-kr-index`] | [이전: 레슨 11 `/cc-start-kr-11`]
+[< 목차: `/cc-start-kr-index`] | [이전: 레슨 11 `/cc-start-kr-11`] | [다음: 보너스 `/cc-start-kr-13`]

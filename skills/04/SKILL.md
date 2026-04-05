@@ -5,7 +5,7 @@ description: "Shift+Tab으로 권한 모드를 전환하여 Claude의 행동 방
 
 # 모드로 조종하기
 
-> 원본: Steer with modes | shift+tab, plan, auto
+> 파일을 다루는 법을 배웠으니, 이제 Claude에게 얼마나 자유를 줄지 정해봅시다.
 
 ## 이게 뭔가요?
 

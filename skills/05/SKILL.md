@@ -5,7 +5,7 @@ description: "CLAUDE.md 파일과 /memory로 Claude에게 프로젝트 규칙을
 
 # 나만의 규칙 가르치기
 
-> 원본: Teach Claude your rules | CLAUDE.md, /memory
+> 모드로 Claude를 조종하는 법을 배웠습니다. 이제 매번 반복하는 말을 규칙으로 저장해봅시다.
 
 ## 이게 뭔가요?
 
