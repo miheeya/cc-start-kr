@@ -12,9 +12,10 @@ for i in index 01 02 03 04 05 06 07 08 09 10 11 12 13; do
   cp -r "$TMP/cc-start-kr/skills/${i}" ~/.claude/skills/cc-start-kr-${i}
 done
 
-# 연습용 샘플 파일 복사
+# 연습용 샘플 파일 + 유틸리티 복사
 mkdir -p ~/.cc-start-kr/samples
 cp -r "$TMP/cc-start-kr/samples/"* ~/.cc-start-kr/samples/ 2>/dev/null
+cp "$TMP/cc-start-kr/mark-complete.sh" ~/.cc-start-kr/mark-complete.sh 2>/dev/null
 
 rm -rf "$TMP"
 

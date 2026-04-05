@@ -72,9 +72,6 @@ samples 폴더에 연습용 파일이 준비되어 있습니다.
 
 > `0` = 목차 | 레슨 번호 입력 = 해당 레슨으로 이동 | **"완료"** = 이 레슨 완료 표시
 
-사용자가 "완료"라고 입력하면 아래 명령어를 실행하고 "보너스 레슨 완료! 모든 레슨을 마치셨다면 축하합니다! 0을 입력해서 진척률을 확인해 보세요."라고 안내하세요:
-```bash
-mkdir -p ~/.cc-start-kr && echo 13 >> ~/.cc-start-kr/completed && sort -un -o ~/.cc-start-kr/completed ~/.cc-start-kr/completed
-```
+"완료" 입력 시: `bash ~/.cc-start-kr/mark-complete.sh 13` 실행
 
 [< 목차: `/cc-start-kr-index`] | [이전: 레슨 12 `/cc-start-kr-12`]
